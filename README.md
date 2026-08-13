@@ -1,32 +1,110 @@
-# EduPrompt AI: An Intelligent Platform for Adaptive Student Learning and Automated Teacher Workflows Using Large Language Models
+# EduPrompt AI
 
-## Group ID: BSEF23-16
+**EduPrompt AI** is an AI-powered educational platform designed to help students learn effective prompt engineering while supporting instructors with automated grading, quiz generation, and learning analytics.
 
-## Group Members
-1. **Bintul Huda** - BSEF23M034 - bsef23m034@pucit.edu.pk | Role: Scrum Master / Backend Lead
-2. **Sadia Daud** - BSEF23M052 - bsef23m052@pucit.edu.pk | Role: Database, DevOps & Privacy Module Lead  
-3. **Abeeha Tariq** - BSEF23M040 - bsef23m040@pucit.edu.pk | Role: LLM Integration & Evaluation Lead
-4. **Laraib Elahi** - BSEF23A013 - bsef23a013@pucit.edu.pk | Role: Product Owner / Frontend Lead
+## Project Overview
 
-## Supervised by
-**Dr. Fatima Sabir** - Assistant Professor
+The system initially focuses on:
 
-## Co-supervisor  
-**Dr. Sanam Ahmed** - Assistant Professor
+* Introduction to Programming (ITP)
+* Object-Oriented Programming (OOP)
+* Data Structures
+* Analysis of Algorithms
 
-## Project Description
-EduPrompt AI is a web platform where students solve "Prompt Problems" across ITP, OOP, Data Structures and Analysis of Algorithms. Prompts are sent to an LLM, the generated code is auto-evaluated for correctness, efficiency, and style, and students receive scaffolded prompting guidance to improve. 
+### Key Features
 
-For teachers, it automates assignment marking and quiz generation/grading using LLMs, reducing manual workload while giving instructors analytics on class performance.
+* Course-specific prompt problems
+* LLM-based code generation
+* Automated code evaluation
+* Hidden test-case evaluation
+* Prompting guidance and adaptive hints
+* Automated assignment grading
+* Quiz generation and grading
+* Privacy Assistant
+* Student and Instructor dashboards
 
-## Target Courses
-ITP, OOP, Data Structures and Analysis of Algorithms
+## Technology Stack
 
-## Setup Instructions
-1. Clone repo: `git clone https://github.com/laraib-elahi/FYDP-EduPrompt-AI-BSE23-16.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Set up environment variables for LLM API keys
+* **Frontend:** React, Tailwind CSS
+* **Backend:** FastAPI / Node.js
+* **Database:** PostgreSQL, MongoDB
+* **AI:** Large Language Models (LLMs)
+* **Sandbox:** Docker
+* **Tools:** Git, GitHub, Postman
 
-## How to Run
-`python main.py`
+## Repository Structure
+
+```text
+trustworthy-ta-agent/
+├── frontend/       # React frontend
+├── backend/        # Backend and AI services
+├── docs/           # Project documentation
+├── .gitignore
+└── README.md
+```
+
+## Setup
+
+### Prerequisites
+
+* Python
+* Node.js
+* Git
+* PostgreSQL
+* MongoDB
+* Docker
+
+### Backend
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## Environment Variables
+
+Create a `.env` file for sensitive configuration such as:
+
+```env
+DATABASE_URL=
+MONGODB_URL=
+LLM_API_KEY=
+```
+
+Do not upload API keys or passwords to GitHub.
+
+## GitHub Workflow
+
+The project uses a `main` branch and feature branches:
+
+```text
+main
+feature/frontend
+feature/backend
+feature/llm-gateway
+feature/database
+feature/sandbox
+```
+
+Development work is completed on feature branches and merged into `main` after review.
+
+## Team
+
+| Name         | Role                         |
+| ------------ | ---------------------------- |
+| Bintul Huda  | Scrum Master / Backend       |
+| Sadia Daud   | Database / DevOps / Privacy  |
+| Abeeha Tariq | LLM Integration / Evaluation |
+| Laraib Elahi | Product Owner / Frontend     |
 
