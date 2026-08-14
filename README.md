@@ -35,7 +35,7 @@ The system initially focuses on:
 ## Repository Structure
 
 ```text
-trustworthy-ta-agent/
+EdupromptAI/
 ├── frontend/       # React frontend
 ├── backend/        # Backend and AI services
 ├── docs/           # Project documentation
