@@ -11,3 +11,36 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+# Node
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+
+# Test/cache
+.pytest_cache/
+.coverage
+
+# Logs
+*.log
