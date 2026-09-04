@@ -1,0 +1,21 @@
+# Optional for now - your current prototype doesn't need a database yet
+# (problems.json is enough for the MVP demo). Once you add user
+# accounts, submission history, etc., run: docker compose up -d
+# and point your backend at postgresql://eduprompt:eduprompt@localhost:5432/eduprompt
+
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: eduprompt
+      POSTGRES_PASSWORD: eduprompt
+      POSTGRES_DB: eduprompt
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
