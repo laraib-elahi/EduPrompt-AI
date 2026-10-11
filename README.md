@@ -2,7 +2,6 @@
 
 **EduPrompt AI: An Intelligent Platform for Adaptive Student Learning and Automated Teacher Workflows Using Large Language Models**
 
-EduPrompt AI is a Final Year Design Project (FYDP) developed by Software Engineering students at the University of the Punjab, Lahore, Pakistan. The project aims to help students develop effective prompt-engineering skills while supporting instructors through AI-assisted assignment grading, quiz generation, and learning analytics.
 
 ## Project Overview
 
