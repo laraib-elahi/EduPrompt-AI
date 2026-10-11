@@ -56,28 +56,7 @@ EdupromptAI/
 
 ### Backend
 
-```bash
-cd backend
-python -m venv venv
-<<<<<<< HEAD
 
-# Activate the virtual environment:
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-pip install -r requirements.txt
-
-# Optional: copy .env.example to .env and add your Anthropic API key
-# to use real LLM generation instead of the stub response.
-cp .env.example .env
-
-uvicorn main:app --reload --port 8000
-```
-
-Backend now running at http://localhost:8000
-Check it's alive: http://localhost:8000/api/health
 
 ## 2. Frontend setup (in a second terminal)
 =======
@@ -87,7 +66,7 @@ uvicorn app.main:app --reload
 ```
 
 ### Frontend
->>>>>>> cbf200cc9b80b90e22a24eae4e0a73ca462a6b29
+
 
 ```bash
 cd frontend
@@ -163,9 +142,7 @@ Development work is completed on feature branches and merged into `main` after r
 
 | Name         | Role                         |
 | ------------ | ---------------------------- |
-| Bintul Huda  | Scrum Master / Backend       |
-| Sadia Daud   | Database / DevOps / Privacy  |
+| Sadia daud   | Scrum Master / Backend       |
+| Bintul huda | Database / DevOps / Privacy  |
 | Abeeha Tariq | LLM Integration / Evaluation |
-| Laraib Elahi | Product Owner / Frontend     |
-
->>>>>>> cbf200cc9b80b90e22a24eae4e0a73ca462a6b29
+| Laraib Elahi | Product Owner / Frontend     
