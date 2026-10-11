@@ -1,119 +1,187 @@
 # EduPrompt AI
 
-**EduPrompt AI** is an AI-powered educational platform designed to help students learn effective prompt engineering while supporting instructors with automated grading, quiz generation, and learning analytics.
+**EduPrompt AI: An Intelligent Platform for Adaptive Student Learning and Automated Teacher Workflows Using Large Language Models**
+
+EduPrompt AI is a Final Year Design Project (FYDP) developed by Software Engineering students at the University of the Punjab, Lahore, Pakistan. The project aims to help students develop effective prompt-engineering skills while supporting instructors through AI-assisted assignment grading, quiz generation, and learning analytics.
 
 ## Project Overview
 
-The system initially focuses on:
+Students increasingly use Large Language Models (LLMs) to generate code, but they may struggle to write effective prompts or evaluate generated results. EduPrompt AI aims to address this challenge through structured, course-specific Prompt Problems, automated code evaluation, and scaffolded prompting guidance.
+
+The platform also aims to reduce instructors' workload through automated marking and quiz workflows, while helping students understand how their data is collected and used.
+
+## Target Courses
 
 * Introduction to Programming (ITP)
 * Object-Oriented Programming (OOP)
 * Data Structures
 * Analysis of Algorithms
 
-### Key Features
+## Key Modules
 
-* Course-specific prompt problems
-* LLM-based code generation
-* Automated code evaluation
-* Hidden test-case evaluation
-* Prompting guidance and adaptive hints
-* Automated assignment grading
-* Quiz generation and grading
-* Privacy Assistant
-* Student and Instructor dashboards
+### 1. Input Domain — Prompt Problems
+
+Course-specific programming challenges presented through input-output examples, supported by hidden test suites.
+
+### 2. LLM Gateway
+
+Sends student prompts to a Large Language Model API and receives generated code for evaluation.
+
+### 3. Code Evaluation Sandbox
+
+Executes generated code in an isolated environment and evaluates correctness, runtime, and style against test cases.
+
+### 4. Guidance Engine
+
+Provides prompting tips, structured prompt templates, and adaptive hints to help students improve their prompts.
+
+### 5. Automated Marking
+
+Supports rubric-based grading of assignments, with confidence scores and manual review of flagged results.
+
+### 6. Quiz Generation and Grading
+
+Generates course-specific quizzes and evaluates student responses.
+
+### 7. Privacy Assistant
+
+Provides conversational answers about the platform's privacy notice and how student data is collected and used.
+
+### 8. Student and Instructor Dashboards
+
+Aims to provide student progress tracking and instructor analytics, including success rates, attempts, grading summaries, and common mistakes.
+
+*These modules describe the project's intended scope. Their availability depends on implementation progress.*
 
 ## Technology Stack
 
-* **Frontend:** React, Tailwind CSS
-* **Backend:** FastAPI / Node.js
-* **Database:** PostgreSQL, MongoDB
-* **AI:** Large Language Models (LLMs)
-* **Sandbox:** Docker
-* **Tools:** Git, GitHub, Postman
+The proposed technology stack includes:
+
+| Layer             | Technologies                 |
+| ----------------- | ---------------------------- |
+| Frontend          | React, Tailwind CSS, Vite    |
+| Backend           | FastAPI / Node.js (Express)  |
+| AI Integration    | Large Language Models (LLMs) |
+| Code Execution    | Docker-based sandbox         |
+| Databases         | PostgreSQL, MongoDB          |
+| Development Tools | Git, GitHub, Docker, Postman |
+
+The final backend framework and service configuration depend on the implementation selected for each component.
 
 ## Repository Structure
 
 ```text
-EdupromptAI/
-├── frontend/       # React frontend
-├── backend/        # Backend and AI services
-├── docs/           # Project documentation
+EduPrompt-AI/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── data/
+│   │   ├── student/
+│   │   ├── teacher/
+│   │   ├── App.jsx
+│   │   ├── api.js
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   └── theme.js
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+├── backend/
+├── docs/
+├── docker-compose.yml
 ├── .gitignore
 └── README.md
 ```
 
-## Setup
+The frontend structure shown above reflects the current frontend source organization. The backend and documentation contents depend on the files maintained in the repository.
 
-### Prerequisites
+## Prerequisites
 
-* Python
+To run the frontend locally, you need:
+
 * Node.js
+* npm
 * Git
-* PostgreSQL
-* MongoDB
-* Docker
 
-### Backend
+Additional dependencies, such as Python, Docker, PostgreSQL, or MongoDB, may be required when running the corresponding backend services.
 
+## Frontend Setup
 
+### 1. Clone the repository
 
-## 2. Frontend setup (in a second terminal)
-=======
-venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+```bash
+git clone https://github.com/laraib-elahi/EduPrompt-AI.git
+cd EduPrompt-AI
 ```
 
-### Frontend
+### 2. Switch to the frontend development branch
 
+The updated frontend is available on `feature/frontend`.
+
+```bash
+git checkout feature/frontend
+```
+
+### 3. Navigate to the frontend directory
 
 ```bash
 cd frontend
+```
+
+### 4. Install dependencies
+
+```bash
 npm install
+```
+
+### 5. Start the development server
+
+```bash
 npm run dev
 ```
 
-<<<<<<< HEAD
-Frontend now running at http://localhost:5173 — open this in your browser.
+Vite will display a local development URL in the terminal, usually:
 
-## 3. Try it
-1. Pick a problem from the sidebar (e.g. "Reverse a String")
-2. Write a prompt describing what the function should do, based on the
-   examples shown
-3. Click "Submit Prompt"
-4. See the generated code and pass/fail results against hidden tests
-
-If you haven't set an API key yet, you'll see a stub response — that's
-expected, and lets you build/demo the full pipeline before connecting
-a real LLM.
-
-## Project structure
-```
-eduprompt-ai/
-├── backend/
-│   ├── main.py              # FastAPI app & routes
-│   ├── llm_gateway.py       # Sends prompts to LLM, gets code back
-│   ├── sandbox.py           # Runs generated code against hidden tests
-│   ├── data/problems.json   # Sample Prompt Problems
-│   ├── requirements.txt
-│   └── .env.example
-├── frontend/
-│   ├── src/App.jsx          # Main UI
-│   └── ...
-└── docker-compose.yml       # Postgres, for when you add persistence
+```text
+http://localhost:5173/
 ```
 
-## Next steps toward your D1 milestones
-- [ ] Add user auth (student/instructor login)
-- [ ] Persist submissions to Postgres instead of in-memory
-- [ ] Add more Prompt Problems for OOP / Data Structures / AoA
-- [ ] Add the Guidance Engine (hints after failed attempts)
-- [ ] Swap subprocess sandbox for real Docker isolation (see notes)
-=======
-## Environment Variables
+Open that URL in your browser.
 
-Create a `.env` file for sensitive configuration such as:
+### 6. Create a production build
+
+To verify and build the frontend for production, run:
+
+```bash
+npm run build
+```
+
+The generated production files are placed in the `dist/` directory.
+
+## Backend Setup
+
+Backend setup depends on the framework and entry point implemented in the `backend/` directory.
+
+For a Python backend that includes a `requirements.txt` file, a typical Windows setup is:
+
+```cmd
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Start the backend using the entry point and command documented by the backend implementation.
+
+For a Node.js backend, follow the scripts and dependencies defined in its `package.json`.
+
+**Note:** The commands above are general setup examples. Verify the actual backend files before running them.
+
+## Environment Variables and Security
+
+Backend services may require environment variables for database connections and AI API access.
+
+If the project provides an `.env.example` file, use it as the reference for local configuration. Example variables may include:
 
 ```env
 DATABASE_URL=
@@ -121,28 +189,25 @@ MONGODB_URL=
 LLM_API_KEY=
 ```
 
-Do not upload API keys or passwords to GitHub.
+The required variable names depend on the implementation.
 
-## GitHub Workflow
+**Security guidelines:**
 
-The project uses a `main` branch and feature branches:
+* Never commit API keys, passwords, or database credentials to GitHub.
+* Keep local `.env` files excluded from version control.
+* Use environment variables for sensitive configuration.
 
-```text
-main
-feature/frontend
-feature/backend
-feature/llm-gateway
-feature/database
-feature/sandbox
-```
+## Development Methodology
 
-Development work is completed on feature branches and merged into `main` after review.
+The project follows the Agile Scrum methodology with two-week sprints.
 
-## Team
 
-| Name         | Role                         |
-| ------------ | ---------------------------- |
-| Sadia daud   | Scrum Master / Backend       |
-| Bintul huda | Database / DevOps / Privacy  |
-| Abeeha Tariq | LLM Integration / Evaluation |
-| Laraib Elahi | Product Owner / Frontend     
+## Team Members
+
+| Team Member  | Roll Number | Role                                   |
+| ------------ | ----------- | -------------------------------------- |
+| Sadia daud  | BSEF23M034  | Scrum Master / Backend Lead            |
+| Bintul Huda  | BSEF23M052  | Database, DevOps & Privacy Module Lead |
+| Abeeha Tariq | BSEF23M040  | LLM Integration & Evaluation Lead      |
+| Laraib Elahi | BSEF23A013  | Product Owner / Frontend Lead          |
+
