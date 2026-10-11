@@ -205,8 +205,8 @@ The project follows the Agile Scrum methodology with two-week sprints.
 
 | Team Member  | Roll Number | Role                                   |
 | ------------ | ----------- | -------------------------------------- |
-| Sadia daud  | BSEF23M034  | Scrum Master / Backend Lead            |
-| Bintul Huda  | BSEF23M052  | Database, DevOps & Privacy Module Lead |
+| Sadia daud  | BSEF23M052  | Scrum Master / Backend Lead            |
+| Bintul Huda  | BSEF23M034  | Database, DevOps & Privacy Module Lead |
 | Abeeha Tariq | BSEF23M040  | LLM Integration & Evaluation Lead      |
 | Laraib Elahi | BSEF23A013  | Product Owner / Frontend Lead          |
 
