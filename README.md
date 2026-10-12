@@ -103,8 +103,8 @@ Development work is completed on feature branches and merged into `main` after r
 
 | Name         | Role                         |
 | ------------ | ---------------------------- |
-| Bintul Huda  | Scrum Master / Backend       |
-| Sadia Daud   | Database / DevOps / Privacy  |
+| Sadia daud | Scrum Master / Backend       |
+| Bintul huda   | Database / DevOps / Privacy  |
 | Abeeha Tariq | LLM Integration / Evaluation |
 | Laraib Elahi | Product Owner / Frontend     |
 
