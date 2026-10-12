@@ -104,13 +104,7 @@ eduprompt-ai/
 └── docker-compose.yml       # Postgres, for when you add persistence
 ```
 
-## Next steps toward your D1 milestones
-- [ ] Add user auth (student/instructor login)
-- [ ] Persist submissions to Postgres instead of in-memory
-- [ ] Add more Prompt Problems for OOP / Data Structures / AoA
-- [ ] Add the Guidance Engine (hints after failed attempts)
-- [ ] Swap subprocess sandbox for real Docker isolation (see notes)
-=======
+
 ## Environment Variables
 
 Create a `.env` file for sensitive configuration such as:
